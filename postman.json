@@ -1,0 +1,421 @@
+{
+	"info": {
+		"_postman_id": "931bd6e8-983a-4ef0-9d52-22deec4c0394",
+		"name": "Shopvana",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28904882"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"dk\",\r\n    \"name\": \"Dnyaneshwar Kawade\",\r\n    \"email\": \"dyaneshwar@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"cpassword\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/auth/create",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"dyaneshwar@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/auth/login",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/auth/logout",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/user/profile",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "read all categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/category/read-all",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"read-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create a category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Category 1\",\r\n    \"description\": \"description 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/category/create",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read specific category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/category/{{category-id}}/read",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"{{category-id}}",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update specific category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"665b7010b487e1be534bf6a9\",\r\n    \"name\": \"Category 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/category/update",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete specific category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"665b6a9ab84c7923fa4049c4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/category/delete",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "item",
+			"item": [
+				{
+					"name": "read all items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/item/read-all",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"read-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create an item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Item 1\",\r\n    \"description\": \"Description of Item 1\",\r\n    \"price\": \"20\",\r\n    \"availableQuantity\": \"200\",\r\n    \"category\": \"665b7010b487e1be534bf6a9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/item/create",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read specific item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/item/{{item-id}}/read",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"{{item-id}}",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete specific item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"665b86f863cd1c73c5996ea8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/item/delete",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"665b88019b4d237544df0ff1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/item/update",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "trigger",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/api",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "http://localhost:8000",
+			"type": "string"
+		},
+		{
+			"key": "category-id",
+			"value": "665b7010b487e1be534bf6a9",
+			"type": "string"
+		},
+		{
+			"key": "item-id",
+			"value": "665b83c36f8e488972019bc2",
+			"type": "string"
+		}
+	]
+}
